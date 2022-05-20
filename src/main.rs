@@ -1,8 +1,10 @@
 use std::time::Instant;
 
+static N:u64 = 1_000_000_000;
+
 fn main() {
     let start = Instant::now();
-    let pi:f64 = calculatepi(1_000_000_000);
+    let pi:f64 = calculatepi(N);
     let duration = start.elapsed();
     println!("π : {} \nΔt : {} s", 
         pi.to_string(), 
